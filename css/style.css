@@ -1,8 +1,117 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 	color: #434455;
 	background-color: #ffffff;
 }
+
+.header {
+	max-width: 100%;
+	height: 72px;
+}
+
+
+nav,
+.section-list,
+.head-container,
+.contact-info {
+	display: flex;
+	flex-direction: row;
+	height: inherit;
+}
+
+.home-link,
+.section-list,
+.main-tel {
+	height: 24px;
+}
+
+.home-link {
+	display: flex;
+	width: 115px;
+	margin-left: 156px;
+	margin-top: 24px;
+	padding: 0;
+}
+
+.section-list {
+	display: flex;
+	padding-left: 0;
+	margin-left: 76px;
+	margin-top: 24px;
+	gap: 40px;
+	width: 261px;
+}
+
+.mail-tel {
+	display: flex;
+	padding-left: 0;
+	margin-top: 24px;
+	margin-left: 332px;
+	gap: 40px;
+}
+
+
+.tit-container {
+	display: flex;
+	height: 600px;
+}
+
+.section-title {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	width: 496px;
+	align-content: center;
+}
+
+.button-class {
+	height: 56px;
+	display: flex;
+	padding: 16px 32px;
+	border-radius: 8px;
+	position: absolute;
+	margiN: 428px;
+}
+
+.about-container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 120px;
+}
+
+.about-list {
+	display: flex;
+	flex-direction: row;
+	width: 1128px;
+	height: 104px;
+}
+
+.item-heading {
+	margin: 0;
+	padding: 0;
+}
+
+.list-item {
+	display: block;
+	flex-direction: row;
+	width: 264px;
+	height: 380px;
+
+}
+
+.item-heading,
+.item-text {
+	justify-content: center;
+}
+
+
 
 .header .home-link {
 	text-decoration: none;
@@ -26,7 +135,13 @@ body {
 	color: #2e2f42;
 }
 
-.section-title .nav-section {
+.section-list,
+.mail-tel,
+.list-item {
+	list-style-type: none;
+}
+
+.section-list .nav-section {
 	text-decoration: none;
 	font-family: "Roboto";
 	font-size: 16px;
@@ -36,8 +151,9 @@ body {
 	color: #2e2f42;
 }
 
-.section-title .nav-section:hover,
-.section-title .nav-section:focus {
+/* list */
+.section-list .nav-section:hover,
+.section-list .nav-section:focus {
 	color: #404bbf;
 }
 
@@ -74,6 +190,10 @@ body {
 
 .section-one {
 	background-color: #2e2f42;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
 }
 
 .button-class {
