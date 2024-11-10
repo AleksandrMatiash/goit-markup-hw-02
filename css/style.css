@@ -4,39 +4,65 @@
 	box-sizing: border-box;
 }
 
+.container {
+	width: 1158px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	margin-top: 120px;
+}
+
 body {
 	font-family: "Roboto", sans-serif;
 	color: #434455;
 	background-color: #ffffff;
 }
 
+img {
+	display: block;
+}
+
 .header {
+	border-bottom: 1px solid #e7e9fc;
 	max-width: 100%;
 	height: 72px;
 }
 
+.nav-box {
+	align-items: center;
+}
 
-nav,
+.nav-section {
+	padding: 24px 0;
+}
+
+.nav-box,
 .section-list,
-.head-container,
+.box,
 .contact-info {
 	display: flex;
 	flex-direction: row;
 	height: inherit;
 }
 
-.home-link,
+.logo,
 .section-list,
 .main-tel {
 	height: 24px;
 }
 
-.home-link {
+.logo {
 	display: flex;
 	width: 115px;
 	margin-left: 156px;
 	margin-top: 24px;
 	padding: 0;
+	margin-right: 76px
 }
 
 .section-list {
@@ -70,40 +96,52 @@ nav,
 	align-content: center;
 }
 
+/* кнопка */
 .button-class {
 	height: 56px;
-	display: flex;
+	border: none;
+	display: block;
 	padding: 16px 32px;
-	border-radius: 8px;
+	border-radius: 4px;
+	min-width: 169px;
 	position: absolute;
-	margiN: 428px;
+	left: 50%;
+	margin: 428px;
 }
 
-.about-container {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	margin-top: 120px;
+.button-class {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.04em;
+	text-align: left;
+	color: #ffffff;
+	background-color: #4d5ae5;
+	cursor: pointer;
 }
+
+.button-class:hover,
+.button-class:focus {
+	background-color: #404bbf
+}
+
+/* кнопка*/
+
 
 .about-list {
 	display: flex;
-	flex-direction: row;
-	width: 1128px;
-	height: 104px;
+	gap: 24px;
 }
 
-.item-heading {
-	margin: 0;
+.about-list .list-item:last-child {
+	margin-right: 0;
+}
+
+.about-list .list .item-heading {
+	margin-bottom: 8px;
 	padding: 0;
-}
-
-.list-item {
-	display: block;
-	flex-direction: row;
 	width: 264px;
-	height: 380px;
-
+	height: 104px;
 }
 
 .item-heading,
@@ -111,9 +149,27 @@ nav,
 	justify-content: center;
 }
 
+.list-item {
+	display: block;
+	flex-direction: row;
+	flex-basis: calc((100% - 3 * 24px)/4);
+	height: 380px;
+	padding: 32px 0;
+}
+
+.list-item {
+	background-color: #ffffff;
+}
+
+.section-list,
+.mail-tel,
+.list-item {
+	list-style-type: none;
+}
 
 
-.header .home-link {
+
+.header .logo {
 	text-decoration: none;
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
@@ -124,8 +180,8 @@ nav,
 	color: #4D5AE5;
 }
 
-.header .home-link:hover,
-.header .home-link:focus {
+.header .logo:hover,
+.header .logo:focus {
 	color: #404b5f;
 }
 
@@ -135,11 +191,6 @@ nav,
 	color: #2e2f42;
 }
 
-.section-list,
-.mail-tel,
-.list-item {
-	list-style-type: none;
-}
 
 .section-list .nav-section {
 	text-decoration: none;
@@ -177,7 +228,7 @@ nav,
 }
 
 
-
+/* s1 */
 .section-one .section-title {
 	font-family: "Roboto";
 	font-size: 56px;
@@ -193,25 +244,14 @@ nav,
 	width: 100%;
 	display: flex;
 	justify-content: center;
+	padding: 188px 0;
+	max-width: 496px;
 
 }
 
-.button-class {
-	border: none;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 24px;
-	letter-spacing: 0.04em;
-	text-align: left;
-	color: #ffffff;
-	background-color: #4d5ae5;
-	cursor: pointer;
-}
+/* s1 */
 
-.button-class:hover,
-.button-class:focus {
-	background-color: #404bbf
-}
+
 
 .team-section {
 	background-color: #f4f4fd
@@ -232,6 +272,18 @@ nav,
 	line-height: 1.2;
 	letter-spacing: 0.02em;
 	color: #2e2f42;
+	margin-bottom: 8px;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
 }
 
 .item-text {
@@ -243,13 +295,11 @@ nav,
 	line-height: 1.5;
 	letter-spacing: 0.02em;
 	color: #434455;
-}
-
-.list-item {
-	background-color: #ffffff;
+	text-align: center;
 }
 
 .main-section {
+	padding: 120px 0;
 	background-color: #F4F4FD;
 }
 
@@ -262,13 +312,14 @@ nav,
 	text-align: left;
 	color: #F4F4FD;
 	background-color: #2E2F42;
+	padding: 100px 0;
 }
 
 .footer .studio-part {
 	color: #F4F4FD;
 }
 
-.footer .home-link {
+.footer .logo {
 	text-decoration: none;
 	font-family: "Raleway", sans-serif;
 	font-size: 18px;
@@ -279,7 +330,26 @@ nav,
 	color: #4D5AE5;
 }
 
-.footer .home-link:focus,
-.footer .home-link:hover {
+.footer .logo:focus,
+.footer .logo:hover {
 	color: #404b5f;
+}
+
+.portfolio-section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.footer-logo {
+	display: inline-block;
+	margin-bottom: 16px;
+	font-weight: 700;
+	color: #4D5AE5;
+	text-decoration: none;
+}
+
+.footp {
+	color: #434455;
+	font-size: 16px;
+	line-height: 1.5;
 }
